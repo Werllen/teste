@@ -1,0 +1,37 @@
+@export @korean
+Feature: Export screens in Korean
+  Open Export Screens to check for error 500 using Korean Language.
+
+  Scenario:
+    Given I open browser using URL 'http://gtm-qadev-amers-cloud.int.thomsonreuters.com/tr-suite-gtm-web/pages/login.jsf'
+    And I use 'Export' module
+    And I login using 'AUTOMATION' username and 'AUTOMATION123' password using 'Korean' language
+  
+  @screentest
+  Scenario Outline: Open different screens in same language, enter register and check for save button
+    Given I enter the '<screen>' screen
+    When I search for results on filter screen
+    Then I see at least one register present
+      Examples:
+    |     screen   							 | 
+  
+  @screentest
+  Scenario Outline: Open different screens in same language, enter register and check for save button
+    Given I enter the '<screen>' screen
+    When I search for results on filter screen
+    And I navigate to selected register
+    Then I see the register loaded correctly    
+      Examples:
+    |     screen   							    | 
+    |  Account Plan 						    |
+    |  Compliance checks				    |
+    |  Export Declaration Request   |
+    |  Export Invoice						    |
+    |  Export License						    |
+    |  Export Map							      |
+    |  Export Order							    |
+    |  Export Order Type				    |
+    |  Export Process						    |
+    |  Freight Quotation				    |
+    |  Incoterms							      |
+    |  Insurance Policy					    |
