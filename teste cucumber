@@ -31,7 +31,7 @@ Feature: Export screens in Korean
     |  Export Map							      |
     |  Export Order							    |
     |  Export Order Type				    |
-    |  Export Process						    |
+    |  Export Process						    | 
     |  Freight Quotation				    |
     |  Incoterms							      |
     |  Insurance Policy					    |
